@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<htm ng-app="myapp">
+
+
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+
+        <title>Sample App</title>
+    </head>
+
+    <body>
+        <script src="/assets/js/app.js"></script>
+
+        <div ng-controller="mainCtrl">
+            <label for="lblApps">Applications</label>
+            <select name="ddApps" ng-model="selectedItem" ng-change="onAppChange()">
+                <option ng-repeat="app in apps" value={{app}}>{{app.appname}}</option>
+            </select> <br>
+            <label for="description">Description</label><br>
+            <label ng-model="description">{{description}}</label>
+        </div>
+
+
+    </body>
+
+    </html>
